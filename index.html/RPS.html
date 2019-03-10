@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 1</title>
+</head>
+
+<body>
+
+  <div id="game">
+
+  </div>
+
+  <script type="text/javascript">
+    // Whenever a key is pressed, alert "pressed a button".
+    // document.onkeyup = function() {
+    //   alert("pressed a button");
+    // };
+
+    // Programming in English!!!! WHAAAAAA??!?!!?!
+
+    /*
+    ** This is all about how a player would make a choice
+    */
+
+    // What are the choices?
+    // [r, p, s]
+    // How do we take user input?
+    // document.onkeyup event?
+    // prompt?
+
+    // What happens if user makes a bad choice?
+    // Alert "Please only choose r, p or s."
+
+    /*
+    ** Player choice pseudocode
+    */
+
+    // choices = [r, p, s]
+      // a function: getPlayerChoice
+      // give some instruction
+      // prompt for value
+      // return value
+
+    var choices = ['r', 'p', 's'];
+
+    function getPlayerChoice() {
+      return prompt('Choose from "r" (rock), "p" (paper), "s" (scissors)');
+    }
+
+    function isPlayerChoiceValid(playerChoice) {
+      var lowerCasePlayerChoice = playerChoice.toLowerCase();
+
+      return lowerCasePlayerChoice === 'r'
+        || lowerCasePlayerChoice === 'p'
+        || lowerCasePlayerChoice === 's';
+
+      // return choices.indexOf(lowerCasePlayerChoice) !== -1;
+    }
+
+    var playerChoice = getPlayerChoice();
+    var playerChoiceIsValid = isPlayerChoiceValid(playerChoice);
+
+    if (playerChoiceIsValid) {
+      alert('Player choice is valid!');
+    } else {
+      alert('Please make sure to only choose "r", "p", or "s"');
+    }
+
+    // Compare values
+    // function isThisAWinner
+      // choose winning scenarios:
+        // [[r, s], [s, p], [p, r]]
+      // check if combination is in winning scenarios
+        // loop through winning scenarios
+          // compare choice1 to scenarioArray[0]
+          // compare choice2 to scenarioArray[1]
+
+    var winningScenarios = [
+      ['r', 's'],
+      ['s', 'p'],
+      ['p', 'r']
+    ];
+
+    function isWinningCombination(choice1, choice2) {
+      var lowerCase
+      for (let scenarioIndex = 0; scenarioIndex < winningScenarios.length; scenarioIndex++) {
+        const scenario = winningScenarios[scenarioIndex];
+
+        return scenario[0] === choice1 && scenario[1] === choice2;
+      }
+    }
+
+    alert(isWinningCombination('r', 'r'));
+    alert(isWinningCombination('r', 's'));
+  </script>
+
+</body>
+
+</html>
