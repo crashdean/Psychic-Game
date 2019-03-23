@@ -1,0 +1,20 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/crystalball.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: rgb(201, 190, 190);
+    margin-top: 60px; 
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: black;
+}
+
+h1, .display, .questions {
+    text-align: center;
+}
