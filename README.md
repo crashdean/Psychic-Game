@@ -1,5 +1,6 @@
 # Psychic-Game
 https://crashdean.github.io/Psychic-Game/
+
 This game will challenge your "Psychic Ability!"
 You will be challenged to guess the letters the game has chossen.
 Guess wrong and your losses score grows. 
